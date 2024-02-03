@@ -34,35 +34,6 @@ addExpense(100, 'Going to movies 🍿', 'Matilda');
 addExpense(200, 'Stuff', 'Jay');
 console.log(budget);
 
-var check = function () {
-  for (var el of budget) {
-    var lim;
-    if (limits[el.user]) {
-      lim = limits[el.user];
-    } else {
-      lim = 0;
-    }
-
-    if (el.value < -lim) {
-      el.flag = 'limit';
-    }
-  }
-};
-check();
-
-console.log(budget);
-
-var bigExpenses = function (limit) {
-  var output = '';
-  for (var el of budget) {
-    if (el.value <= -limit) {
-      output += el.description.slice(-2) + ' / '; // Emojis are 2 chars
-    }
-  }
-  output = output.slice(0, -2); // Remove last '/ '
-  console.log(output);
-};
-
 
 
 
