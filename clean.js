@@ -66,25 +66,4 @@ var bigExpenses = function (limit) {
 
 
 
-function removeElement(nums, val) {
-  let k = 0;  // Initialize the count of elements not equal to val
-
-  for (let i = 0; i < nums.length; i++) {
-      if (nums[i] !== val) {
-          nums[k] = nums[i];  // Move non-val elements to the front of the array
-          k++;  // Increment count for each non-val element
-      }
-  }
-
-  return k;  // k represents the number of elements not equal to val
-}
-
-// Example usage:
-let nums = [3, 2, 2, 3, 4, 5, 6];
-let val = 3;
-let result = removeElement(nums, val);
-
-console.log(nums.slice(0, result));  // Output the modified array with non-val elements
-console.log(result);  // Output the count of elements not equal to val
-
 
